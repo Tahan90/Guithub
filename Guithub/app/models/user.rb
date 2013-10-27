@@ -1,5 +1,13 @@
 class User < ActiveRecord::Base
-  attr_accessible :username, :password, :password_confirmation
-  validates :username, presence: true, uniqueness: true
-  has_secure_password
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
+         
+  # Setup validation for your model
+  validates_presence_of :fname, :lname, :dob, :type
+
+  # Setup accessible (or protected) attributes for your model
+  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :desc, :dob, :fname, :instruments, :lname, :type
 end

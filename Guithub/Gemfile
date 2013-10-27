@@ -36,3 +36,9 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use debugger
 # gem 'debugger'
+
+# Devise Authentication
+gem 'devise', '~> 3.1.1'
+
+# Calendar Date Selector gem
+#gem 'calendar_date_select'

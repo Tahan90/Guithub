@@ -3,3 +3,14 @@
 
 en:
   hello: "Hello world"
+  
+  activerecord:
+    attributes:
+      user:
+        fname: "First Name"
+        lname: "Last Name"
+        dob: "Date of Birth"
+        type: "Account Type"
+        desc: "Personal Description"
+        instruments: "Guitar Experience"
+          

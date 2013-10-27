@@ -10,23 +10,44 @@
       </ul>
     </div>
   <% end %>
-  
-  <fieldset>
-  	<legend>Enter User Details</legend>
-  	<div class="field">
-      <%= f.label :username %>:
-      <%= f.text_field :username, size: 40 %>
-    </div>
-    <div class="field">
-      <%= f.label :password, 'Password' %>:
-      <%= f.password_field :password, size: 40 %>
-    </div>
-    <div class="field">
-      <%= f.label :password_confirmation, 'Comfirm Password' %>:
-      <%= f.password_field :password_confirmation, size: 40 %>
-    </div>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-  </fieldset>
+
+  <div class="field">
+    <%= f.label :fname, "First Name" %><br />
+    <%= f.text_field :fname %>
+  </div>
+  <div class="field">
+    <%= f.label :lname, "Last Name" %><br />
+    <%= f.text_field :lname %>
+  </div>
+  <div class="field">
+    <%= f.label :dob, "Date of Birth" %><br />
+    <%= f.date_select :dob %>
+  </div>
+  <div class="field">
+    <%= f.label :email, "Email" %><br />
+    <%= f.number_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password, "Password" %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation, "Confirm Password" %><br />
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <div class="field">
+    <%= f.label :type, "Select Account Type" %><br />
+    <%= f.number_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :desc, "Describe Yourself" %><br />
+    <%= f.text_area :desc %>
+  </div>
+  <div class="field">
+    <%= f.label :instruments, "Guitar Experience" %><br />
+    <%= f.text_area :instruments %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 <% end %>
