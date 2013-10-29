@@ -1,46 +1,67 @@
-<h3>Register</h3>
+<div class="page-header">
+	<h3>Register</h3>
+</div>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), 
+	:html => { :class => 'form-horizontal' }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :fname %><br />
-    <%= f.text_field :fname, :autofocus => true %>
+  <div class="control-group">
+    <%= f.label :fname, :class => 'control-label' %>
+    <div class="controls">
+    	<%= f.text_field :fname, :class => 'text_field', :autofocus => true %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :lname %><br />
-    <%= f.text_field :lname %>
+  <div class="control-group">
+    <%= f.label :lname, :class => 'control-label' %>
+    <div class="controls">
+    	<%= f.text_field :lname, :class => 'text_field' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :dob %><br />
-    <%= f.date_select :dob %>
+  <div class="control-group">
+    <%= f.label :dob, :class => 'control-label' %>
+    <div class="controls">
+    	<%= f.text_field :dob, :class => 'text_field' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.number_field :email %>
+  <div class="control-group">
+    <%= f.label :email, :class => 'control-label' %>
+    <div class="controls">
+    	<%= f.text_field :email, :class => 'text_field' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
+  <div class="control-group">
+    <%= f.label :password, :class => 'control-label' %>
+    <div class="controls">
+    	<%= f.password_field :password, :class => 'password_field' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :password_confirmation, "Confirm Password" %><br />
-    <%= f.password_field :password_confirmation %>
+  <div class="control-group">
+    <%= f.label :password_confirmation, :class => 'control-label' %>
+    <div class="controls">
+    	<%= f.password_field :password_confirmation, :class => 'password_field' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :type %><br />
-    <%= f.number_field :type %>
+  <div class="control-group">
+    <%= f.label :account_type, :class => 'control-label' %>
+    <div class="controls">
+    	<%= f.select :account_type, options_for_select([['Student',0], ['Instructor',1]]), :class =>'dropdown' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :desc, "Describe Yourself" %><br />
-    <%= f.text_area :desc %>
+  <div class="control-group">
+    <%= f.label :desc, :class => 'control-label' %>
+    <div class="controls">
+    	<%= f.text_area :desc, :class => 'text_area' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :instruments %><br />
-    <%= f.text_area :instruments %>
+  <div class="control-group">
+    <%= f.label :instruments, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :instruments, :class => 'text_area' %>
+    </div>
   </div>
 
-  <div><%= f.submit "Register" %></div>
+  <div><%= f.submit :class => 'btn btn-primary' "Register" %></div>
 <% end %>
 
 <%= render "users/shared/links" %>

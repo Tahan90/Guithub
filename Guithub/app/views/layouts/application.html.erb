@@ -2,16 +2,21 @@
 <html>
 <head>
   <title>Guithub</title>
+
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/smoothness/jquery-ui.css" %>
   <%= javascript_include_tag "application" %>
-
-
-  
+  <%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div class="container">
+	<div class="row">
+		<div class="span3 offset9">
+			<%= render "users/shared/user_links" %>
+		</div>
+	</div>
+	<%= yield %>
+</div>
 </body>
 </html>

@@ -13,4 +13,5 @@ en:
         type: "Account Type"
         desc: "Personal Description"
         instruments: "Guitar Experience"
+        password_confirmation: "Password Confirmation"
           

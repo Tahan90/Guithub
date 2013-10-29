@@ -1,8 +1,17 @@
 Guithub::Application.routes.draw do
+  get "main/landing"
+
+  get "main/index"
+
   devise_for :users, :path_names => { :sign_up => "register"} 
 
-  resources :users
-
+  #resources :users
+  
+  authenticated :user do
+    root to: 'main#index', as: :authenticated_root
+  end
+  root to: 'main#landing'
+  #root :to => 'main#landing'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
